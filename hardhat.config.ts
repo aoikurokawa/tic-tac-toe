@@ -11,7 +11,7 @@ import fs from "fs";
 dotenv.config();
 
 const privateKey =
-  fs.readFileSync(".secret").toString().trim() || "01234567890123456789";
+  fs.readFileSync(".").toString().trim() || "01234567890123456789";
 
 // This is a sample Hardhat task. To learn how to create your own go to
 // https://hardhat.org/guides/create-task.html
