@@ -96,7 +96,9 @@ contract NFTMarket is ReentrancyGuard {
         idToMarketItem[itemId].owner = payable(msg.sender);
         idToMarketItem[itemId].sold = true;
 
-        idToMarketItem[itemId].seller.transfer(msg.value);
+        (bool sent, bytes memory data) = idToMarketItem[itemId].seller.call{value: msg.value}("");
+        require(sent, "Failed to send Ether");
+        // idToMarketItem[itemId].seller.transfer(msg.value);
 
         IERC721(nftContract).transferFrom(address(this), msg.sender, tokenId);
 
