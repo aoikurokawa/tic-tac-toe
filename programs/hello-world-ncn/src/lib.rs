@@ -12,10 +12,7 @@ pub mod hello_world_ncn {
 
     use super::*;
 
-    pub fn setup_game(
-        ctx: Context<setup_game::SetupGame>,
-        player_two: Pubkey,
-    ) -> Result<()> {
+    pub fn setup_game(ctx: Context<setup_game::SetupGame>, player_two: Pubkey) -> Result<()> {
         msg!("Instruction: SetupGame");
         instructions::setup_game::setup_game(ctx, player_two)
     }
