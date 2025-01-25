@@ -850,15 +850,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "hello-world-ncn"
-version = "0.1.0"
-dependencies = [
- "anchor-lang",
- "num-derive",
- "num-traits",
-]
-
-[[package]]
 name = "hmac"
 version = "0.8.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1628,6 +1619,15 @@ dependencies = [
  "proc-macro2",
  "quote",
  "syn 2.0.96",
+]
+
+[[package]]
+name = "tic-tac-toe"
+version = "0.1.0"
+dependencies = [
+ "anchor-lang",
+ "num-derive",
+ "num-traits",
 ]
 
 [[package]]

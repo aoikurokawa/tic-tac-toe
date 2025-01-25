@@ -1,12 +1,12 @@
 [package]
-name = "hello-world-ncn"
+name = "tic-tac-toe"
 version = "0.1.0"
 description = "Created with Anchor"
 edition = "2021"
 
 [lib]
 crate-type = ["cdylib", "lib"]
-name = "hello_world_ncn"
+name = "tic_tac_toe"
 
 [features]
 default = []
