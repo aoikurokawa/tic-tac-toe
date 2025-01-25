@@ -6,7 +6,6 @@ pub mod errors;
 mod instructions;
 pub mod state;
 
-// this key needs to be changed to whatever public key is returned by "anchor keys list"
 declare_id!("5trraE6UJC9m6TKDRQQkXoC3VaFYGYnzKeTwyfXXjho7");
 
 #[anchor_lang::program]
