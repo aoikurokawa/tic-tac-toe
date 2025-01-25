@@ -1,10 +1,26 @@
 # Tic Tac Toe NCN
 
-## Setting up the game
+## Overview
 
-### State
+### Setting up the game
 
-## Playing the game
+#### State
+
+### Playing the game
+
+##  Getting Started
+
+### Build
+
+```bash
+anchor build
+```
+
+### Test
+
+```bash
+anchor test
+```
 
 ## References
 - https://www.anchor-lang.com/docs/tic-tac-toe

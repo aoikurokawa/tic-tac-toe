@@ -1,7 +1,8 @@
-use crate::core::errors::TicTacToeError;
 use anchor_lang::prelude::*;
 use num_derive::*;
 use num_traits::*;
+
+use crate::errors::TicTacToeError;
 
 #[account]
 pub struct Game {

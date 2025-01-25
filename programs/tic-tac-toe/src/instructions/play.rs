@@ -1,6 +1,9 @@
-use crate::core::errors::TicTacToeError;
-use crate::core::game::*;
 use anchor_lang::prelude::*;
+
+use crate::{
+    errors::TicTacToeError,
+    state::game::{Game, Tile},
+};
 
 pub fn play(ctx: Context<Play>, tile: Tile) -> Result<()> {
     let game = &mut ctx.accounts.game;
@@ -18,5 +21,6 @@ pub fn play(ctx: Context<Play>, tile: Tile) -> Result<()> {
 pub struct Play<'info> {
     #[account(mut)]
     pub game: Account<'info, Game>,
+
     pub player: Signer<'info>,
 }
