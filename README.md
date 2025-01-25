@@ -10,6 +10,12 @@
 
 ##  Getting Started
 
+### Check Format and Lint
+
+```bash
+
+```
+
 ### Build
 
 ```bash
