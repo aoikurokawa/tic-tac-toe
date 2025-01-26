@@ -6,10 +6,13 @@ use crate::errors::TicTacToeError;
 
 #[account]
 pub struct Game {
-    players: [Pubkey; 2],          // (32 * 2)
-    turn: u8,                      // 1
+    players: [Pubkey; 2], // (32 * 2)
+
+    turn: u8, // 1
+
     board: [[Option<Sign>; 3]; 3], // 9 * (1 + 1) = 18
-    state: GameState,              // 32 + 1
+
+    state: GameState, // 32 + 1
 }
 
 impl Game {
@@ -109,6 +112,17 @@ impl Game {
         // game has no more free tiles
         // -> game ends in a tie
         self.state = GameState::Tie;
+    }
+
+    pub fn seeds() -> Vec<Vec<u8>> {
+        vec![b"game".to_vec()]
+    }
+
+    pub fn find_program_address(program_id: &Pubkey) -> (Pubkey, u8, Vec<Vec<u8>>) {
+        let seeds = Self::seeds();
+        let seeds_iter: Vec<_> = seeds.iter().map(|s| s.as_slice()).collect();
+        let (pda, bump) = Pubkey::find_program_address(&seeds_iter, program_id);
+        (pda, bump, seeds)
     }
 }
 

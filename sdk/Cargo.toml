@@ -1,12 +1,10 @@
 [package]
-name = "integration_tests"
+name = "tic-tac-toe-sdk"
 version = "0.1.0"
 edition = "2021"
 
 [dependencies]
+borsh = { workspace = true }
 solana-program = { workspace = true }
-solana-sdk = { workspace = true }
-solana-program-test = { workspace = true }
 thiserror = { workspace = true }
 tic-tac-toe = { workspace = true }
-tokio = { workspace = true }

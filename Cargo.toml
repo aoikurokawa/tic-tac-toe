@@ -1,8 +1,23 @@
 [workspace]
-members = [ "integration_tests",
-    "programs/*"
+members = [
+    "integration_tests",
+    "programs/*",
+    "sdk"
 ]
 resolver = "2"
+
+[workspace.dependencies]
+anchor-lang = "0.30.1"
+borsh = "0.10.3" 
+num-derive = "0.4.2"
+num-traits = "0.2.19"
+sdk = { path = "./sdk" }
+solana-program = "1.17.3"
+solana-sdk = "1.17.3"
+solana-program-test = "1.17.3"
+thiserror = "1.0.57"
+tic-tac-toe = { path = "./programs/tic-tac-toe", features = ["no-entrypoint"] }
+tokio = { version = "1.36.0", features = ["macros"] }
 
 [profile.release]
 overflow-checks = true
