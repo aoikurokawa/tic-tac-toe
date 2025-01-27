@@ -1,5 +1,7 @@
 use solana_program_test::BanksClientError;
-use solana_sdk::{instruction::InstructionError, program_error::ProgramError, transaction::TransactionError};
+use solana_sdk::{
+    instruction::InstructionError, program_error::ProgramError, transaction::TransactionError,
+};
 use thiserror::Error;
 
 pub mod fixture;
