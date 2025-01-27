@@ -2225,6 +2225,7 @@ dependencies = [
  "solana-sdk",
  "thiserror",
  "tic-tac-toe",
+ "tic-tac-toe-sdk",
  "tokio",
 ]
 

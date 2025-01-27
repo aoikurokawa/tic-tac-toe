@@ -9,4 +9,5 @@ solana-sdk = { workspace = true }
 solana-program-test = { workspace = true }
 thiserror = { workspace = true }
 tic-tac-toe = { workspace = true }
+tic-tac-toe-sdk = { workspace = true }
 tokio = { workspace = true }

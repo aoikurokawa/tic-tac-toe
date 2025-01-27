@@ -17,6 +17,7 @@ solana-sdk = "1.17.3"
 solana-program-test = "1.17.3"
 thiserror = "1.0.57"
 tic-tac-toe = { path = "./programs/tic-tac-toe", features = ["no-entrypoint"] }
+tic-tac-toe-sdk = { path = "./sdk" }
 tokio = { version = "1.36.0", features = ["macros"] }
 
 [profile.release]
