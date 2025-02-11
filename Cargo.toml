@@ -1,0 +1,11 @@
+[workspace]
+members = ["core", "sdk"]
+
+resolver = "2"
+
+[workspace.dependencies]
+bytemuck = "1.21.0"
+num-derive = "0.4.2"
+num-traits = "0.2.19"
+sdk = { path = "sdk", version = "0.1.0" }
+solana-program = "~1.18"
