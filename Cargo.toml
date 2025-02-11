@@ -1,0 +1,7 @@
+[workspace]
+members = ["core"]
+
+resolver = "2"
+
+[workspace.dependencies]
+solana-program = "~1.18"
