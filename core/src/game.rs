@@ -42,7 +42,7 @@ impl Game {
     }
 
     pub fn play(&mut self, tile: &Tile) -> Result<(), TicTacToeError> {
-        if self.is_active(){
+        if self.is_active() {
             return Err(TicTacToeError::GameAlreadyOver);
         }
 
@@ -54,7 +54,7 @@ impl Game {
                 Some(_) => return Err(TicTacToeError::TileAlreadySet.into()),
                 None => {
                     self.board[tile.row as usize][tile.column as usize] =
-                        Some(self.current_player_index() as u8) ;
+                        Some(self.current_player_index() as u8);
                 }
             },
             _ => return Err(TicTacToeError::TileOutOfBounds.into()),
@@ -62,7 +62,7 @@ impl Game {
 
         self.update_state();
 
-        if  self.state == 0 {
+        if self.state == 0 {
             self.turn += 1;
         }
 
