@@ -51,13 +51,13 @@ impl Game {
                 row: 0..=2,
                 column: 0..=2,
             } => match self.board[tile.row as usize][tile.column as usize] {
-                Some(_) => return Err(TicTacToeError::TileAlreadySet.into()),
+                Some(_) => return Err(TicTacToeError::TileAlreadySet),
                 None => {
                     self.board[tile.row as usize][tile.column as usize] =
                         Some(self.current_player_index() as u8);
                 }
             },
-            _ => return Err(TicTacToeError::TileOutOfBounds.into()),
+            _ => return Err(TicTacToeError::TileOutOfBounds),
         }
 
         self.update_state();
